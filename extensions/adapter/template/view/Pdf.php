@@ -2,7 +2,7 @@
 /**
  * li3_pdf: Pdf for Lithium
  *
- * @copyright     Copyright 2010, Martin Samson <pyrolian@gmail.com>
+ * @copyright     Copyright 2011, Martin Samson <pyrolian@gmail.com>
  * @copyright     Copyright 2010, Union of RAD (http://union-of-rad.org)
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
