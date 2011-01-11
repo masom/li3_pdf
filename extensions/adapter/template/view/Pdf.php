@@ -1,11 +1,17 @@
 <?php
+/**
+ * li3_pdf: Pdf for Lithium
+ *
+ * @copyright     Copyright 2010, Martin Samson <pyrolian@gmail.com>
+ * @copyright     Copyright 2010, Union of RAD (http://union-of-rad.org)
+ * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ */
 namespace li3_pdf\extensions\adapter\template\view;
 
 use \lithium\util\String;
 use \lithium\core\Libraries;
 use \lithium\template\TemplateException;
 use li3_pdf\extensions\PdfWrapper;
-
 
 class Pdf extends \lithium\template\view\Renderer implements \ArrayAccess {
 

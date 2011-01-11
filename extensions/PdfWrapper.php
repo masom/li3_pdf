@@ -1,4 +1,10 @@
 <?php
+/**
+ * li3_pdf: Pdf for Lithium
+ *
+ * @copyright     Copyright 2010, Martin Samson <pyrolian@gmail.com>
+ * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ */
 namespace li3_pdf\extensions;
 use \tcpdf\TCPDF;
 
