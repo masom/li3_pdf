@@ -12,13 +12,22 @@ class PdfWrapper extends \tcpdf\TCPDF{
     private $__layout = array();
     
     public function Header(){
-    	$this->__layout['header']();
+    	if(is_callable($this->__layout['header'])){
+    		$this->__layout['header']();
+    	}else{
+    		parent::Header();
+    	}
     } 
     public function Footer() {
-    	$this->__layout['footer']();
+    	if(is_callable($this->__layout['footer'])){
+    		$this->__layout['footer']();
+    	}else{
+    		parent::Footer();
+    	}
     }
     public function setCustomLayout($layout){
-    	$this->__layout = $layout;
+    	$default = array('header'=> null, 'footer'=>null);
+    	$this->__layout = array_merge($default,$layout);
     }
 }
 ?>
