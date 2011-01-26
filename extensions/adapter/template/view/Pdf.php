@@ -87,7 +87,9 @@ class Pdf extends \lithium\template\view\Renderer implements \ArrayAccess {
 		} elseif ($this->_view) {
 			extract((array) $this->_view->outputFilters, EXTR_OVERWRITE);
 		}
+		ob_start();
 		include $template__;
+		return ob_get_clean();
 	}
 
 	/**
