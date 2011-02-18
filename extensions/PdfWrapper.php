@@ -6,9 +6,10 @@
  * @license       http://opensource.org/licenses/bsd-license.php The BSD License
  */
 namespace li3_pdf\extensions;
-use \tcpdf\TCPDF;
 
-class PdfWrapper extends \tcpdf\TCPDF{
+use TCPDF;
+
+class PdfWrapper extends TCPDF{
 	
 	/**
 	 * 
