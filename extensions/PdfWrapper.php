@@ -9,8 +9,18 @@ namespace li3_pdf\extensions;
 use \tcpdf\TCPDF;
 
 class PdfWrapper extends \tcpdf\TCPDF{
+	
+	/**
+	 * 
+	 * Holds the layout callbacks
+	 */
     private $__layout = array();
     
+    /**
+     * 
+     * Executes a given render callback method to generate the header
+     * @see libraries/tcpdf/tcpdf.TCPDF::Header()
+     */
     public function Header(){
     	if(is_callable($this->__layout['header'])){
     		$this->__layout['header']();
@@ -18,6 +28,11 @@ class PdfWrapper extends \tcpdf\TCPDF{
     		parent::Header();
     	}
     } 
+    
+    /**
+     * Executes a given render callback method to generate the header
+     * @see libraries/tcpdf/tcpdf.TCPDF::Footer()
+     */
     public function Footer() {
     	if(is_callable($this->__layout['footer'])){
     		$this->__layout['footer']();
@@ -25,7 +40,13 @@ class PdfWrapper extends \tcpdf\TCPDF{
     		parent::Footer();
     	}
     }
-    public function setCustomLayout($layout){
+    
+    /**
+     * 
+     * Set the layout options for the header and footer
+     * @param $layout array
+     */
+    public function setCustomLayout(array $layout = array()){
     	$default = array('header'=> null, 'footer'=>null);
     	$this->__layout = array_merge($default,$layout);
     }
