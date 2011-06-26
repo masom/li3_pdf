@@ -32,6 +32,7 @@ echo $this->Pdf->Output('filename.pdf', 'D');
 ## Create a view:
 
 app/views/[controller]/view.pdf.php
+
 ```php
 <?php
 $pdf =& $this->Pdf;
@@ -64,6 +65,7 @@ $this->Pdf->Cell(0,14, "Hello World", 0,1,'L');
 
 ## Rendering the PDF as a normal response
 Add the following to app/config/bootstrap/media.php
+
 ```php
 Media::type('pdf', 'application/pdf', array());
 ```
