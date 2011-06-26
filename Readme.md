@@ -14,6 +14,7 @@ li3_pdf brings PDF support to Lithium using the <http://www.tcpdf.org>  library.
 # Application Setup
 
 app/config/bootstrap/libraries.php
+
 ```php
 Library::add('li3_pdf');
 ```
