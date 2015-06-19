@@ -18,8 +18,8 @@ class Pdf extends \lithium\template\Helper {
 	/*
 	 * Holds the TCPDF instance
 	 */
-	private $_pdf = null;
 	
+	protected $_pdf = null;
 	/**
 	 * The page orientation based on TCPDF parameters
 	 */
