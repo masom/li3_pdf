@@ -18,8 +18,8 @@ class Pdf extends \lithium\template\Helper {
 	/*
 	 * Holds the TCPDF instance
 	 */
-	private $_pdf = null;
 	
+	protected $_pdf = null;
 	/**
 	 * The page orientation based on TCPDF parameters
 	 */
@@ -55,7 +55,7 @@ class Pdf extends \lithium\template\Helper {
 	 */
 	public $pdfa = false;
 	
-	public function _init() {
+	protected function _init() {
 		parent::_init();
 		$this->_pdf = new $this->_classes['pdf'](
 			$this->orientation,
